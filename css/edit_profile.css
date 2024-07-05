@@ -1,0 +1,133 @@
+.profileContainer {
+    padding-top: 60px;
+    /* ヘッダーの高さを考慮 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileImage {
+    z-index: 999;
+}
+
+.profileImage img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(206, 232, 255, 0.7);
+    color: black;
+    margin-top: -100px;
+}
+
+#name {
+    margin-top: 100px;
+}
+
+.profileInfo h2 {
+    margin: 15% 0 20px 0;
+    color: white;
+}
+
+.profileInfo input {
+    width: 70%;
+    padding: 10px;
+    margin: 5% 0 2.5% 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+
+    &::placeholder {
+        color: rgba(206, 232, 255, 0.5);
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    &:focus {
+        color: rgba(143, 200, 253, 1);
+        outline: none;
+        border-bottom: 1.2px solid rgba(27, 219, 244);
+        font-size: 18px;
+        transition: .8s all ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+.profileInfo select {
+    width: 76%;
+    padding: 10px;
+    margin: 5% 0 2.5% 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+
+    &::placeholder {
+        color: rgba(206, 232, 255, 0.5);
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    &:focus {
+        color: rgba(143, 200, 253, 1);
+        outline: none;
+        border-bottom: 1.2px solid rgba(27, 219, 244);
+        font-size: 18px;
+        transition: .8s all ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+.profileInfo button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00c6ff, #eb0ef2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 7% 0;
+
+    &:hover {
+        background: linear-gradient(to right, #09eb9c, #ff8c00);
+        color: black;
+    }
+}
+
+.profileInfo button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.backButton {
+    background-color: white;
+    color: rgb(14, 31, 62);
+    border: none;
+    padding: 10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.backButton:hover {
+    background-color: rgb(200, 200, 200);
+}

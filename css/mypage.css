@@ -1,0 +1,322 @@
+.menu-bar {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background-color: rgb(14, 31, 62);
+    z-index: 998;
+    border-bottom: solid 0.25px rgba(255, 255, 255, 0.25);
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-bar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-bar ul li {
+    margin: 0;
+}
+
+.menubarTag {
+    display: block;
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menubarTag:hover,
+.menubarTag.active {
+    color: rgba(30, 255, 255);
+    border-bottom: 2px solid rgb(130, 255, 255);
+}
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 40%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar button#close-btn {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mypage {
+    display: none;
+    padding-top: 120px;
+    width: 100%;
+    text-align: center;
+}
+
+.mypage.active {
+    display: block;
+}
+
+/* ポップアップのスタイル */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup-page {
+    display: none;
+}
+
+.popup-page.active {
+    display: block;
+}
+
+.option {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #d0d0d0;
+}
+
+.next-btn,
+.register-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-btn:hover,
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+.myShop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charts-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.charts-container h2 {
+    text-align: center;
+}
+
+.charts-container canvas {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* 検索バー */
+.searchCommunity {
+    margin-left: 12%;
+    width: 80%;
+    height: 100%;
+}
+
+.searchCommunity input {
+    width: 75%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+}
+
+.searchCommunity input::placeholder {
+    color: rgba(206, 232, 255, 0.5);
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.searchCommunity input:focus {
+    color: rgba(143, 200, 253, 1);
+    outline: none;
+    border-bottom: 1.2px solid rgba(27, 219, 244);
+    font-size: 14px;
+    transition: .8s all ease;
+}
+
+.searchCommunity input:focus::placeholder {
+    opacity: 0;
+}
+
+.searchCommunity button {
+    background: transparent;
+    border: none;
+}
+
+.searchIcon {
+    width: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(to right, #00c6ff, #eb0ef2);
+    cursor: pointer;
+}
+
+/* コミュニティ表示のスタイル */
+.viewSwitch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    margin: 30px 175px;
+}
+
+.tab-button {
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #22028a;
+    background-color: #0099ff95;
+    color: white;
+}
+
+.tab-button img {
+    width: 15px;
+}
+
+.communityList {
+    display: none;
+}
+
+.communityList.active {
+    display: block;
+}
+
+.communityList ul {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.communityList ul li {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    box-shadow: 4px 4px 6px -2px rgba(179, 179, 179, 0.75);
+}
+
+.communityList ul li a {
+    color: rgb(4, 0, 255);
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.communityGrid {
+    display: none;
+}
+
+.communityGrid.active {
+    display: block;
+}
+
+.communityGrid .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.communityGrid .gridItem {
+    width: 45%;
+    margin: 2.5%;
+    padding: 70px 20px;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    box-shadow: 4px 4px 6px -2px rgba(179, 179, 179, 0.75);
+}
+
+.communityGrid .gridItem a {
+    width: 100%;
+    height: 100%;
+}
+
+.searchResults {
+    display: none;
+}
+
+.searchResults.active {
+    display: block;
+}

@@ -1,0 +1,58 @@
+body {
+    font-family: 'Orkney', sans-serif;
+    background-color: rgb(14, 31, 62);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    width: 400px;
+    background-color: rgb(14, 31, 62);
+    z-index: 999;
+    padding: 10px 0;
+}
+
+.headerLeft {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.headerLeft img {
+    width: 120px;
+}
+
+.headerRight {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2px;
+}
+
+.headerRight button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.headerRight img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}

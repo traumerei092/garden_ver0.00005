@@ -1,0 +1,137 @@
+.topContainer {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25%;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ddd;
+    width: 70%;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #22028a;
+    background-color: #0099ff95;
+    color: white;
+}
+
+.form-container {
+    display: none;
+    width: 90%;
+    margin-top: 10%;
+    background-color: rgba(206, 232, 255, 0.4);
+    border-radius: 2.5%;
+}
+
+.form-container.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2 {
+    margin: 15% 0 20px 0;
+    color: white;
+}
+
+form input {
+    width: 70%;
+    padding: 10px;
+    margin: 5% 0 2.5% 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+
+    &::placeholder {
+        color: rgba(206, 232, 255, 0.5);
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    &:focus {
+        color: rgba(143, 200, 253, 1);
+        outline: none;
+        border-bottom: 1.2px solid rgba(27, 219, 244);
+        font-size: 18px;
+        transition: .8s all ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+form select {
+    width: 76%;
+    padding: 10px;
+    margin: 5% 0 2.5% 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-size: 16px;
+    color: white;
+
+    &::placeholder {
+        color: rgba(206, 232, 255, 0.5);
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    &:focus {
+        color: rgba(143, 200, 253, 1);
+        outline: none;
+        border-bottom: 1.2px solid rgba(27, 219, 244);
+        font-size: 18px;
+        transition: .8s all ease;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00c6ff, #eb0ef2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15% 0;
+
+    &:hover {
+        background: linear-gradient(to right, #09eb9c, #ff8c00);
+        color: black;
+    }
+}
+
+.invalid-credentials {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
